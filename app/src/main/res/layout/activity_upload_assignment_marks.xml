@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/app_bg"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@+id/profile_layout"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical">
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Date:">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_Assingnment_date"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:cursorVisible="false"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/assinmentNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Assignment No">
+            <AutoCompleteTextView
+                android:id="@+id/assinment_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:inputType="textCapWords"
+                android:imeOptions="flagNoExtractUi"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.7">
+            <ImageView
+                android:id="@+id/stdImage"
+                android:layout_width="@dimen/img_medium"
+                android:layout_height="@dimen/img_medium"
+                android:src="@drawable/camera"
+                android:scaleType="centerCrop"
+                android:layout_centerInParent="true"/>
+            <!--app:layout_collapseMode="3"-->
+
+            <TextView
+                android:textSize="16dp"
+                android:ellipsize="end"
+                android:id="@+id/tvStdAttendance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="Take Iamge Test"
+                android:layout_centerInParent="true"/>
+        </LinearLayout>
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.3">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout__Assignment_regsitration__number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Registration Number">
+                    <AutoCompleteTextView
+                        android:id="@+id/atv_std_Assingnment_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:imeOptions="flagNoExtractUi"/>
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_std_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="student name">
+                    <AutoCompleteTextView
+                        android:id="@+id/atv_std_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:imeOptions="flagNoExtractUi"/>
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_subject"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="subjectname">
+                    <AutoCompleteTextView
+                        android:id="@+id/et_test_subject"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:inputType="textCapWords"
+                        android:imeOptions="flagNoExtractUi"/>
+                </com.google.android.material.textfield.TextInputLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2">
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_layout_total_marks"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:hint="total marks"
+                        android:layout_weight="1">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_total_marks"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:scrollHorizontally="true"
+                            android:singleLine="true"
+                            android:inputType="numberDecimal"
+                            android:imeOptions="flagNoExtractUi"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_layout_passing_marks"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:hint="passing marks"
+                        android:layout_weight="1">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_passing_marks"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:scrollHorizontally="true"
+                            android:singleLine="true"
+                            android:inputType="numberDecimal"
+                            android:imeOptions="flagNoExtractUi"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2">
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/input_layout_obtained_marks"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:hint="obtained marks"
+                        android:layout_weight="1">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_obtained_marks"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:scrollHorizontally="true"
+                            android:singleLine="true"
+                            android:inputType="numberDecimal"
+                            android:imeOptions="flagNoExtractUi"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:textColor="@color/colorblack"
+                        android:ellipsize="end"
+                        android:layout_gravity="bottom"
+                        android:id="@+id/et_status"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:hint="status"
+                        android:cursorVisible="false"
+                        android:scrollHorizontally="true"
+                        android:singleLine="true"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="other description">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_other_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textCapWords"
+                        android:imeOptions="flagNoExtractUi"/>
+                </com.google.android.material.textfield.TextInputLayout>
+                <ImageButton
+                    android:id="@+id/buttonRegister"
+                    android:src="@drawable/submit_key"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </LinearLayout>
+
+</ScrollView>

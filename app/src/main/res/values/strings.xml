@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Student Tracker</string>
+    <string name="name_student"> Please Enter Name</string>
+    <string name="name_father"> Please Enter  Father Name</string>
+    <string name="registration_number"> Please Enter  Registeration Number</string>
+    <string name="email"> Please Enter  Email Address</string>
+    <string name="phone_no"> Please Enter  Phone Number</string>
+    <string name="address"> Please Enter  Address</string>
+    <string name="title_activity_notifaction">Notifaction</string>
+</resources>
